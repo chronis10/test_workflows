@@ -33,7 +33,7 @@ jobs:
         uses: docker/build-push-action@v2
         
         with:       
-          context: basic_images
+          context: .
           file: Dockerfile.Test
           platforms: linux/arm64
           push: true
