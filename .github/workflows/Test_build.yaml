@@ -38,5 +38,5 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: |
-            hronis10/teast_arm:latest
+            hronis10/teast_arm:arm64
 #             user/app:1.0.0
