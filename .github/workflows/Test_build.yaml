@@ -19,7 +19,7 @@ jobs:
         name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          username: ${{ env.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 #       -
 #         name: Login to GitHub Container Registry
@@ -38,5 +38,5 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: |
-            hronis10/teast_arm:arm64
+            ${{ env.DOCKERHUB_USER }}/teast_arm:arm64
 #             user/app:1.0.0
